@@ -1,4 +1,4 @@
-# LexQuery — IPC RAG Assistant
+# LexQuery: AN IPC RAG Assistant
 
 AI-powered Indian Penal Code research assistant. Ask about specific sections or whether something is legal. Answers are grounded in actual IPC text with section citations.
 
