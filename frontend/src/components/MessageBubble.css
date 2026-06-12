@@ -1,0 +1,105 @@
+.bubble-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.bubble-row--user {
+  flex-direction: row-reverse;
+}
+
+.bubble-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--navy-light);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  color: var(--brass);
+}
+
+.bubble-avatar--error {
+  background: rgba(192, 57, 43, 0.15);
+  border-color: rgba(192, 57, 43, 0.4);
+  color: var(--error);
+  font-weight: 700;
+}
+
+.bubble {
+  max-width: 78%;
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  line-height: 1.65;
+}
+
+.bubble--user {
+  background: var(--brass);
+  color: var(--navy);
+  border-bottom-right-radius: 4px;
+}
+
+.bubble--assistant {
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-bottom-left-radius: 4px;
+}
+
+.bubble--error {
+  background: rgba(192, 57, 43, 0.1);
+  border: 1px solid rgba(192, 57, 43, 0.3);
+  color: #e07070;
+  border-bottom-left-radius: 4px;
+}
+
+.bubble-text {
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+/* ── Source citations ────────────────────────────────────────────────────── */
+
+.bubble-sources {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.sources-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.sources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.source-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  background: rgba(201, 150, 58, 0.1);
+  border: 1px solid rgba(201, 150, 58, 0.3);
+  border-radius: 4px;
+  padding: 3px 8px;
+  color: var(--brass-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+
+.source-title {
+  color: var(--text-secondary);
+  font-size: 10px;
+}

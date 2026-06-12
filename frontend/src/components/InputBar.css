@@ -1,0 +1,118 @@
+.inputbar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Suggestion chips ───────────────────────────────────────────────────── */
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestion-chip {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  font-family: 'Inter', sans-serif;
+}
+
+.suggestion-chip:hover:not(:disabled) {
+  border-color: var(--brass);
+  color: var(--brass-light);
+}
+
+.suggestion-chip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Input row ──────────────────────────────────────────────────────────── */
+
+.inputbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  background: var(--navy-mid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  transition: border-color 0.2s;
+}
+
+.inputbar:focus-within {
+  border-color: var(--brass);
+}
+
+.inputbar-textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  min-height: 22px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.inputbar-textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.inputbar-textarea:disabled {
+  opacity: 0.5;
+}
+
+.inputbar-send {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--brass);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  flex-shrink: 0;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.inputbar-send:hover:not(:disabled) {
+  background: var(--brass-light);
+}
+
+.inputbar-send:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.inputbar-send--loading {
+  background: var(--navy-light);
+}
+
+/* Spinner inside send button */
+.send-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(201, 150, 58, 0.3);
+  border-top-color: var(--brass);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
